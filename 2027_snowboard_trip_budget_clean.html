@@ -83,6 +83,19 @@ summary::-webkit-details-marker{display:none}summary:after{content:"＋";color:v
 .plan-options label:has(input:checked){border-color:var(--blue);background:var(--blue-soft)}
 input{accent-color:var(--blue)}
 :focus-visible{outline:3px solid #f0a52b;outline-offset:4px}
+.estimate-note,.photo-credit{font-size:12px;color:var(--muted);margin:6px 0 12px}
+.stay-lead{font-size:16px;font-weight:750;color:var(--navy);margin:0 0 15px}
+.stay-gallery{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:150px 150px;gap:8px;border-radius:15px;overflow:hidden}
+.stay-gallery a{position:relative;display:block;overflow:hidden;background:var(--blue-soft)}
+.stay-gallery a:first-child{grid-row:1/3}
+.stay-gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .25s}
+.stay-gallery img[hidden]{display:none}
+.stay-gallery a:hover img{transform:scale(1.035)}
+.photo-fallback{display:none;padding:20px;text-align:center;font-size:13px}
+.photo-unavailable{display:grid!important;place-items:center}
+.photo-unavailable .photo-fallback{display:block}
+@media(max-width:640px){.stay-gallery{grid-template-columns:1fr 1fr;grid-template-rows:220px 125px}.stay-gallery a:first-child{grid-column:1/3;grid-row:auto}}
+@media(prefers-reduced-motion:reduce){.stay-gallery img{transition:none}.stay-gallery a:hover img{transform:none}}
 </style>
 </head>
 <body>
@@ -130,17 +143,18 @@ input{accent-color:var(--blue)}
     </div>
 
     <h3>6人で割る共通費の内訳</h3>
+    <p class="estimate-note">金額はすべて概算です。</p>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>項目</th><th>1人あたり</th><th>6人合計</th><th>状態</th></tr></thead>
+        <thead><tr><th>項目</th><th>1人あたり</th><th>6人合計</th></tr></thead>
         <tbody>
-          <tr><td>宿泊費</td><td>14,667円</td><td>88,000円</td><td class="status">確定</td></tr>
-          <tr><td>レンタカー</td><td>3,392円</td><td>20,350円</td><td class="status">表示価格ベース</td></tr>
-          <tr><td>ガソリン</td><td>2,333円</td><td>14,000円</td><td class="status">概算</td></tr>
-          <tr><td>高速道路</td><td>2,667円</td><td>16,000円</td><td class="status">概算</td></tr>
-          <tr><td id="parking-label">野沢駐車場</td><td id="parking-person">167円</td><td id="parking-total">1,000円</td><td class="status">想定・要確認</td></tr>
-          <tr><td>共同食費</td><td>3,667円</td><td>22,000円</td><td class="status">予算</td></tr>
-          <tr class="total"><td>共通費</td><td data-common-person>26,892円</td><td id="common-total">161,350円</td><td>—</td></tr>
+          <tr><td>宿泊費</td><td>14,667円</td><td>88,000円</td></tr>
+          <tr><td>レンタカー</td><td>3,392円</td><td>20,350円</td></tr>
+          <tr><td>ガソリン</td><td>2,333円</td><td>14,000円</td></tr>
+          <tr><td>高速道路</td><td>2,667円</td><td>16,000円</td></tr>
+          <tr><td id="parking-label">野沢駐車場</td><td id="parking-person">167円</td><td id="parking-total">1,000円</td></tr>
+          <tr><td>共同食費</td><td>3,667円</td><td>22,000円</td></tr>
+          <tr class="total"><td>共通費</td><td data-common-person>26,892円</td><td id="common-total">161,350円</td></tr>
         </tbody>
       </table>
     </div>
@@ -163,6 +177,23 @@ input{accent-color:var(--blue)}
   </section>
 
   <section class="card">
+    <h2>🏡 宿泊：ease1（イーズワン）高山村</h2>
+    <p class="stay-lead">たっぷり滑ったあとは、みんなで一棟貸しの宿へ。</p>
+    <div class="stay-gallery" aria-label="ease1の宿泊施設写真">
+      <a href="https://www.airbnb.jp/rooms/1033686182697114521" target="_blank" rel="noopener noreferrer" aria-label="宿の写真1：Airbnbで詳しく見る"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1033686182697114521/original/d88d773e-8a38-412a-8297-adf0ebab6097.jpeg?im_w=720" alt="ease1 高山村の掲載写真 1" width="720" height="480" loading="lazy" decoding="async" onerror="this.hidden=true;this.parentElement.classList.add('photo-unavailable')"><span class="photo-fallback">宿の写真をAirbnbで見る ↗</span></a>
+      <a href="https://www.airbnb.jp/rooms/1033686182697114521" target="_blank" rel="noopener noreferrer" aria-label="宿の写真2：Airbnbで詳しく見る"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1033686182697114521/original/0c9c973b-7b99-4e4a-8a3b-be9bc22e9dda.jpeg?im_w=720" alt="ease1 高山村の掲載写真 2" width="720" height="480" loading="lazy" decoding="async" onerror="this.hidden=true;this.parentElement.classList.add('photo-unavailable')"><span class="photo-fallback">宿の写真をAirbnbで見る ↗</span></a>
+      <a href="https://www.airbnb.jp/rooms/1033686182697114521" target="_blank" rel="noopener noreferrer" aria-label="宿の写真3：Airbnbで詳しく見る"><img src="https://a0.muscache.com/im/pictures/miso/Hosting-1033686182697114521/original/c905ae17-eb94-4012-9c52-6a08d1159e81.jpeg?im_w=720" alt="ease1 高山村の掲載写真 3" width="720" height="480" loading="lazy" decoding="async" onerror="this.hidden=true;this.parentElement.classList.add('photo-unavailable')"><span class="photo-fallback">宿の写真をAirbnbで見る ↗</span></a>
+    </div>
+    <p class="photo-credit">写真：<a href="https://www.airbnb.jp/rooms/1033686182697114521" target="_blank" rel="noopener noreferrer">Airbnb・ease1掲載写真</a> ／ 季節により景色が異なります。</p>
+    <p>長野県高山村にある、1日1組限定の一棟貸し。最大6人で宿泊できます。</p>
+    <ul><li>寝室2室／シングルベッド4台＋布団2組</li>
+      <li>キッチン・Wi-Fi・洗濯機・乾燥機・敷地内無料駐車場</li>
+      <li>宿泊費：6人で88,000円（今回の見積額）</li></ul>
+    <p><a class="link-btn" href="https://www.airbnb.jp/rooms/1033686182697114521" target="_blank" rel="noopener noreferrer">Airbnbで宿の詳細・写真を見る ↗</a></p>
+    <small>設備情報はAirbnb掲載内容を2026年9月17日に確認。チェックイン・アウト時刻は予約内容を確認してください。</small>
+  </section>
+
+  <section class="card">
     <h2>🗓 旅程</h2>
     <div class="route">
       <div class="step">1</div><div class="stop"><b>船橋 → 和光 → 竜王スキーパーク</b><span>元旦早朝出発を想定。和光でメンバー合流。</span></div>
@@ -171,16 +202,6 @@ input{accent-color:var(--blue)}
       <div class="step">4</div><div class="stop"><b id="day2-route">2日目：野沢温泉スキー場</b><span>滑走後、温泉・夕食も候補。</span></div>
       <div class="step">5</div><div class="stop"><b id="return-route">野沢温泉 → 和光 → 船橋</b><span id="return-note">道路状況により長野側／新潟側ルートを当日判断。</span></div>
     </div>
-  </section>
-
-  <section class="card">
-    <h2>🏡 宿泊：ease1（イーズワン）高山村</h2>
-    <p>長野県高山村にある、1日1組限定の一棟貸し。最大6人で宿泊できます。</p>
-    <ul><li>寝室2室／シングルベッド4台＋布団2組</li>
-      <li>キッチン・Wi-Fi・洗濯機・乾燥機・敷地内無料駐車場</li>
-      <li>宿泊費：6人で88,000円（今回の見積額）</li></ul>
-    <p><a class="link-btn" href="https://www.airbnb.jp/rooms/1033686182697114521" target="_blank" rel="noopener noreferrer">Airbnbで宿の詳細・写真を見る ↗</a></p>
-    <small>設備情報はAirbnb掲載内容を2026年9月17日に確認。チェックイン・アウト時刻は予約内容を確認してください。</small>
   </section>
 
   <section class="card">
