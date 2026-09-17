@@ -8,9 +8,13 @@
 
 `?plan=ryuoo` 付きURLで2日間とも竜王のプランを共有できます。通常は竜王→野沢温泉です。
 
+## 公開・自動更新
+
+GitHub Pagesの公開元をGitHub Actionsに設定します。`main` にpushすると `.github/workflows/pages.yml` が公開用HTMLを同期し、`public/` を自動公開します。
+
 ## 検索除外
 
-HTMLのrobotsメタタグとSites用 `_headers` でnoindexを指定しています。noindexはアクセス制限ではなく、URLを知っている人は閲覧できます。検索エンジンがタグを読めるようrobots.txtでクロール自体は拒否していません。
+HTMLのrobotsメタタグでnoindexを指定しています。GitHub Pagesでは `_headers` によるヘッダー設定は適用されません。noindexはアクセス制限ではなく、URLを知っている人は閲覧できます。検索エンジンがタグを読めるようrobots.txtでクロール自体は拒否していません。
 
 ## 見積の前提
 
