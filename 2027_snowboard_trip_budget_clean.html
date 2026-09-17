@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#173a6a">
+<title>2027 年始スノボ旅行｜予算・旅程</title>
+<style>
+:root{
+  --bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#667085;--line:#e5e9f0;
+  --navy:#173a6a;--blue:#2563eb;--blue-soft:#edf3ff;--green:#087a55;--green-soft:#eaf8f2;
+  --amber:#8a5700;--amber-soft:#fff6df;--red:#a52a22;--red-soft:#fff1ef;
+  --shadow:0 10px 28px rgba(20,42,78,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;line-height:1.65}
+a{color:var(--blue);font-weight:700;text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{width:min(920px,100%);margin:auto;padding:18px 14px 54px}
+.hero{background:linear-gradient(140deg,#10284c 0%,#2053a3 68%,#2d6de0 100%);color:#fff;border-radius:22px;padding:25px 20px;box-shadow:0 16px 36px rgba(17,52,103,.2)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.08em;opacity:.76}
+h1{font-size:clamp(24px,6vw,33px);line-height:1.25;margin:5px 0 9px}
+.hero p{margin:0;opacity:.88;font-size:14px}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.pill{font-size:12px;font-weight:750;border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.1);padding:5px 10px;border-radius:999px}
+
+.budget-title{font-size:15px;margin:21px 2px 10px;color:#344054}
+.budget-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.budget{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow)}
+.budget.green{border-top:4px solid #13a575}.budget.blue{border-top:4px solid var(--blue)}
+.budget .label{font-size:13px;font-weight:800;color:#475467}
+.budget .amount{font-size:clamp(31px,7vw,42px);font-weight:900;letter-spacing:-.04em;line-height:1.1;margin:7px 0 5px}
+.budget .calc{font-size:12px;color:var(--muted)}
+.budget .delta{display:inline-block;margin-top:9px;font-size:12px;font-weight:800;border-radius:999px;padding:4px 8px;background:var(--blue-soft);color:#234d9c}
+
+.summary{background:#fff;border:1px solid var(--line);border-radius:17px;margin:12px 0 18px;padding:14px 16px;font-size:13px;color:#475467}
+.summary b{color:var(--ink)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:19px;margin:14px 0;box-shadow:0 5px 20px rgba(25,47,78,.035)}
+h2{font-size:19px;margin:0 0 13px;letter-spacing:-.02em}
+h3{font-size:14px;margin:18px 0 8px;color:#475467}
+
+.cost-flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:7px}
+.flow-box{border-radius:14px;padding:13px 10px;background:#f8fafc;border:1px solid var(--line);text-align:center}
+.flow-box .k{font-size:11px;color:var(--muted);font-weight:750}.flow-box .v{font-size:18px;font-weight:900;margin-top:2px}
+.flow-box.rental{background:var(--blue-soft);border-color:#cedcff}.plus{align-self:center;color:#98a2b3;font-size:20px;font-weight:700}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:13px;background:#fff}
+th,td{padding:10px 11px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;color:var(--muted);background:#f9fafb}
+tbody tr:last-child td{border-bottom:0}.total td{font-weight:900;background:#f8fafc}
+.status{font-size:11px;color:var(--muted)}
+
+.route{display:grid;grid-template-columns:35px 1fr;column-gap:11px}
+.step{width:31px;height:31px;border-radius:50%;display:grid;place-items:center;background:var(--blue-soft);color:var(--blue);font-size:13px;font-weight:900}
+.stop{padding:2px 0 14px;border-bottom:1px dashed var(--line);margin-bottom:12px}.stop:last-child{border:0;margin:0;padding-bottom:0}
+.stop b{display:block;font-size:14px}.stop span{font-size:12px;color:var(--muted)}
+
+.notice{border-radius:14px;padding:12px 13px;font-size:13px;margin-top:12px}
+.info{background:var(--blue-soft);color:#244a8f}.warn{background:var(--amber-soft);color:#704900}.risk{background:var(--red-soft);color:#81241e}
+ul{margin:6px 0;padding-left:21px}li+li{margin-top:5px}
+
+details{border:1px solid var(--line);border-radius:14px;background:#fff;margin-top:10px;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:13px 14px;font-size:13px;font-weight:850;display:flex;justify-content:space-between;align-items:center}
+summary::-webkit-details-marker{display:none}summary:after{content:"＋";color:var(--blue);font-size:18px}details[open] summary:after{content:"−"}
+.details-body{padding:0 14px 14px;color:#475467;font-size:13px;border-top:1px solid var(--line)}
+
+.links{display:flex;gap:8px;flex-wrap:wrap}.link-btn{display:inline-block;border:1px solid #cdd9f2;background:#f6f9ff;border-radius:11px;padding:8px 11px;font-size:12px}
+.share-row{display:flex;gap:8px;margin-top:14px}.share-btn{appearance:none;border:0;border-radius:11px;padding:9px 12px;background:#173a6a;color:#fff;font-weight:800;cursor:pointer;font-size:12px}
+.footer{text-align:center;color:var(--muted);font-size:11px;margin-top:23px;padding:0 10px}
+
+@media(max-width:640px){
+  .wrap{padding:10px 10px 42px}.hero{border-radius:18px;padding:22px 17px}
+  .budget-grid{grid-template-columns:1fr}.budget{padding:16px}.card{border-radius:17px;padding:16px}
+  .cost-flow{grid-template-columns:1fr auto 1fr}.cost-flow .optional-plus{display:none}.cost-flow .rental{grid-column:1/4}
+}
+.plan-options{display:flex;gap:10px;flex-wrap:wrap;border:0;padding:0;margin:0}
+.plan-options legend{font-weight:800;margin-bottom:10px}
+.plan-options label{display:flex;align-items:center;gap:7px;border:1px solid #cdd9f2;border-radius:12px;padding:12px;cursor:pointer;background:#f6f9ff}
+.plan-options label:has(input:checked){border-color:var(--blue);background:var(--blue-soft)}
+input{accent-color:var(--blue)}
+:focus-visible{outline:3px solid #f0a52b;outline-offset:4px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="eyebrow">6人 / 1泊2日 / レンタカー</div>
+    <h1>2027 年始スノボ旅行</h1>
+    <p id="hero-route">船橋 → 和光 → 竜王スキーパーク → 高山村・ease1 → 野沢温泉スキー場</p>
+    <div class="pills"><span class="pill">1日目 竜王</span><span class="pill">宿泊 ease1 高山村</span><span class="pill" id="day2-pill">2日目 野沢温泉</span></div>
+  </header>
+
+  <section class="card" aria-label="プラン選択">
+    <fieldset class="plan-options"><legend>2日目、どこで滑る？</legend>
+      <label><input type="radio" name="plan" value="nozawa" checked>竜王 → 野沢温泉</label>
+      <label><input type="radio" name="plan" value="ryuoo">2日間とも竜王</label>
+    </fieldset>
+    <p id="plan-note" class="notice info" role="status" aria-live="polite">現在の見積：1日目は竜王、2日目は野沢温泉。</p>
+    <small>竜王は1日券5,800円の仮見積×日数。2日券の割引は未反映。交通費・レンタル代は両プランで同額に仮置きしています。</small>
+  </section>
+  <div class="budget-title"><b>まず、いくら用意すればいい？</b></div>
+  <section class="budget-grid" aria-label="1人あたり予算">
+    <article class="budget green">
+      <div class="label">🏂 板・ブーツ持参</div>
+      <div class="amount"><span id="bring-budget">42,000</span><small style="font-size:.48em">円</small></div>
+      <div class="calc">計算上の概算：<span id="bring-total">40,492円</span></div>
+    </article>
+    <article class="budget blue">
+      <div class="label">🎿 板・ブーツを2日レンタル</div>
+      <div class="amount"><span id="rental-budget">53,000</span><small style="font-size:.48em">円</small></div>
+      <div class="calc">計算上の概算：<span id="rental-total">50,892円</span></div>
+      <span class="delta">持参より +10,400円</span>
+    </article>
+  </section>
+
+  <div class="summary"><b>予算額は少し余裕を含めています。</b> 現時点でレンタカー補償・ボードキャリア等が未確定のため、実費ぴったりではなく「用意しておく金額」として表示しています。</div>
+
+  <section class="card">
+    <h2>💰 1人分は何にかかる？</h2>
+    <div class="cost-flow">
+      <div class="flow-box"><div class="k">6人共通費</div><div class="v" data-common-person>26,892円</div></div>
+      <div class="plus">＋</div>
+      <div class="flow-box"><div class="k">リフト券 2日</div><div class="v" data-lift-total>13,600円</div></div>
+      <div class="plus optional-plus">＋</div>
+      <div class="flow-box rental"><div class="k">レンタルする人のみ</div><div class="v">10,400円</div></div>
+    </div>
+
+    <h3>6人で割る共通費の内訳</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>項目</th><th>1人あたり</th><th>6人合計</th><th>状態</th></tr></thead>
+        <tbody>
+          <tr><td>宿泊費</td><td>14,667円</td><td>88,000円</td><td class="status">確定</td></tr>
+          <tr><td>レンタカー</td><td>3,392円</td><td>20,350円</td><td class="status">表示価格ベース</td></tr>
+          <tr><td>ガソリン</td><td>2,333円</td><td>14,000円</td><td class="status">概算</td></tr>
+          <tr><td>高速道路</td><td>2,667円</td><td>16,000円</td><td class="status">概算</td></tr>
+          <tr><td id="parking-label">野沢駐車場</td><td id="parking-person">167円</td><td id="parking-total">1,000円</td><td class="status">想定・要確認</td></tr>
+          <tr><td>共同食費</td><td>3,667円</td><td>22,000円</td><td class="status">予算</td></tr>
+          <tr class="total"><td>共通費</td><td data-common-person>26,892円</td><td id="common-total">161,350円</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <details>
+      <summary>リフト券・レンタルの内訳</summary>
+      <div class="details-body">
+        <div class="table-wrap" style="margin-top:12px">
+          <table>
+            <tbody>
+              <tr><td>1日目：竜王 リフト券</td><td>約5,800円</td><td class="status">2026-27正式料金確認前</td></tr>
+              <tr><td id="day2-lift-label">2日目：野沢 リフト券</td><td id="day2-lift-price">7,800円</td><td class="status" id="day2-lift-status">元の見積額・旅行前に再確認</td></tr>
+              <tr class="total"><td>リフト2日</td><td data-lift-total>13,600円</td><td>—</td></tr>
+              <tr><td>板＋ブーツ</td><td>約10,400円</td><td class="status">2日分概算</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>🗓 旅程</h2>
+    <div class="route">
+      <div class="step">1</div><div class="stop"><b>船橋 → 和光 → 竜王スキーパーク</b><span>元旦早朝出発を想定。和光でメンバー合流。</span></div>
+      <div class="step">2</div><div class="stop"><b>1日目：竜王スキーパーク</b><span>竜王で滑走。</span></div>
+      <div class="step">3</div><div class="stop"><b>高山村・ease1（イーズワン）へ</b><span>宿泊費は6人合計 88,000円。</span></div>
+      <div class="step">4</div><div class="stop"><b id="day2-route">2日目：野沢温泉スキー場</b><span>滑走後、温泉・夕食も候補。</span></div>
+      <div class="step">5</div><div class="stop"><b id="return-route">野沢温泉 → 和光 → 船橋</b><span id="return-note">道路状況により長野側／新潟側ルートを当日判断。</span></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>🏡 宿泊：ease1（イーズワン）高山村</h2>
+    <p>長野県高山村にある、1日1組限定の一棟貸し。最大6人で宿泊できます。</p>
+    <ul><li>寝室2室／シングルベッド4台＋布団2組</li>
+      <li>キッチン・Wi-Fi・洗濯機・乾燥機・敷地内無料駐車場</li>
+      <li>宿泊費：6人で88,000円（今回の見積額）</li></ul>
+    <div class="notice warn"><b>薪サウナは有料オプション：</b>1回5,000円（6人なら約834円／人）。現在の予算には含めていません。着火は自分たちで行い、暖まるまで約1〜2時間。利用料金・予約方法は宿へ確認してください。</div>
+    <p><a class="link-btn" href="https://www.airbnb.jp/rooms/1033686182697114521" target="_blank" rel="noopener noreferrer">Airbnbで宿の詳細・写真を見る ↗</a></p>
+    <small>設備情報はAirbnb掲載内容を2026年9月17日に確認。チェックイン・アウト時刻は予約内容を確認してください。</small>
+  </section>
+
+  <section class="card">
+    <h2>📌 まだ変わる可能性がある費用</h2>
+    <ul>
+      <li>竜王の2026-27正式リフト料金</li>
+      <li>レンタカーの免責 / NOC補償</li>
+      <li>ボードキャリア料金</li>
+      <li>高速料金（帰路ルートで変動）</li>
+      <li>ガソリン実費</li>
+    </ul>
+    <div class="notice risk"><b>荷物について：</b>6人＋宿泊荷物＋自前ボードの場合、セレナの車内だけでは厳しい可能性あり。持参人数が決まり次第、ルーフキャリア対応を確認。</div>
+    <details>
+      <summary>レンタカー仮計の根拠</summary>
+      <div class="details-body"><p>候補：セレナ 8人乗り・ハイブリッド・スタッドレス。基本料金17,050円＋スタッドレス3,300円＝20,350円で仮置きしています。</p></div>
+    </details>
+  </section>
+
+  <section class="card">
+    <h2>🔗 スキー場</h2>
+    <div class="links">
+      <a class="link-btn" href="https://ryuoo.com/winter/" target="_blank" rel="noopener noreferrer">竜王スキーパーク 公式 ↗</a>
+      <a class="link-btn" href="https://nozawaski.com/winter/" target="_blank" rel="noopener noreferrer">野沢温泉スキー場 公式 ↗</a>
+    </div>
+    <div class="share-row"><button class="share-btn" type="button" onclick="sharePage()">このページを共有</button></div>
+  </section>
+
+  <div class="footer">作成時点の概算です。料金・積雪・道路状況等は旅行前に再確認してください。</div>
+</main>
+<script>
+// 見積の変更はここで管理。予算は元の見積の余裕額を保ち、千円単位で切り上げ。
+const estimate = {people:6, lodging:88000, car:20350, gas:14000, toll:16000, food:22000,
+  ryuooLift:5800, nozawaLift:7800, nozawaParking:1000, ryuooParking:0, rental:10400,
+  bringBuffer:1500, rentalBuffer:2000};
+const yen = value => Math.ceil(value).toLocaleString('ja-JP')+'円';
+const put = (id, value) => document.getElementById(id).textContent = value;
+function updatePlan(plan){
+  const ryuoo = plan === 'ryuoo';
+  const e=estimate;
+  const parking=ryuoo?e.ryuooParking:e.nozawaParking;
+  const common=e.lodging+e.car+e.gas+e.toll+e.food+parking;
+  const lift=e.ryuooLift+(ryuoo?e.ryuooLift:e.nozawaLift);
+  const total=common/e.people+lift;
+  const name=ryuoo?'竜王スキーパーク':'野沢温泉スキー場';
+  put('hero-route','船橋 → 和光 → 竜王スキーパーク → 高山村・ease1 → '+name);
+  put('day2-pill','2日目 '+(ryuoo?'竜王':'野沢温泉'));
+  put('bring-total',yen(total)); put('rental-total',yen(total+e.rental));
+  put('bring-budget',(Math.ceil((total+e.bringBuffer)/1000)*1000).toLocaleString('ja-JP'));
+  put('rental-budget',(Math.ceil((total+e.rental+e.rentalBuffer)/1000)*1000).toLocaleString('ja-JP'));
+  document.querySelectorAll('[data-common-person]').forEach(el=>el.textContent=yen(common/e.people));
+  document.querySelectorAll('[data-lift-total]').forEach(el=>el.textContent=yen(lift));
+  put('common-total',yen(common)); put('parking-label',ryuoo?'竜王駐車場（2日）':'野沢駐車場');
+  put('parking-person',yen(parking/e.people)); put('parking-total',yen(parking));
+  put('day2-lift-label','2日目：'+(ryuoo?'竜王':'野沢')+' リフト券');
+  put('day2-lift-price',yen(ryuoo?e.ryuooLift:e.nozawaLift));
+  put('day2-lift-status',ryuoo?'2026-27正式料金確認前':'元の見積額・旅行前に再確認');
+  put('day2-route','2日目：'+name); put('return-route',(ryuoo?'竜王':'野沢温泉')+' → 和光 → 船橋');
+  put('return-note',ryuoo?'竜王から帰路へ。道路状況によりルートを当日判断。':'道路状況により長野側／新潟側ルートを当日判断。');
+  put('plan-note',ryuoo?'2日間とも竜王：元のプランより約'+Math.round(e.nozawaLift-e.ryuooLift+(e.nozawaParking-e.ryuooParking)/e.people).toLocaleString('ja-JP')+'円／人安い見積です。竜王の駐車場は無料想定（要確認）。':'現在の見積：1日目は竜王、2日目は野沢温泉。');
+}
+const params=new URLSearchParams(location.search);
+const initialPlan=params.get('plan')==='ryuoo'?'ryuoo':'nozawa';
+document.querySelector('input[value="'+initialPlan+'"]').checked=true;
+updatePlan(initialPlan);
+document.querySelectorAll('input[name="plan"]').forEach(input=>input.addEventListener('change',()=>{
+  updatePlan(input.value);
+  const url=new URL(location.href); url.searchParams.set('plan',input.value);
+  try{history.replaceState(null,'',url);}catch(e){}
+}));
+
+async function sharePage(){
+  const data={title:document.title,text:'2027 年始スノボ旅行｜予算・旅程',url:location.href};
+  try{
+    if(navigator.share){await navigator.share(data);return;}
+    await navigator.clipboard.writeText(location.href);
+    alert('ページURLをコピーしました');
+  }catch(e){}
+}
+</script>
+</body>
+</html>
